@@ -10,7 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-
+ 
  *= require_self
  */
 
@@ -63,3 +63,69 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 } 
+
+
+ .center {
+    text-align: center;
+}
+
+
+
+/* Footer */
+.footer1 {
+    max-width: 100%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+
+.footer1, .footer1 a {
+     color: #00A380;
+   
+
+    font-size: 0.9rem;
+}
+
+.footer1 p {
+    margin: 1.5rem;
+
+}
+
+
+.footer1 ul {
+   list-style: none;
+
+}
+.footer1 .footer1-cols {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer1 li {
+    line-height: 1.9;
+}
+
+.footer1 li:hover {
+   
+}
+
+
+
+
+
+/* Footer */
+#main-footer1 {
+    color: #ccc;
+    text-align: center;
+    font-size: 0.4rem;
+    max-width: 100%;
+    padding-top: 5rem;
+
+}
+
+
+#main-footer1 a {
+    color: #00A380;
+    text-decoration: underline;
+}
