@@ -25,12 +25,15 @@ Things you may want to cover:
 * gem 'rails_12factor', group: :production
 
 * Configuration
-
-* Database creation
+* git clone https://github.com/urich-tech/version-commit.git
+* bundle stall
 
 * Database initialization
+* rails db:migrate
+* rails s
 
 * How to run the test suite
+* rake test
 
 * Services (job queues, cache servers, search engines, etc.)
 
