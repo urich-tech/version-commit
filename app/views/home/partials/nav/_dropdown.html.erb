@@ -1,0 +1,21 @@
+<li class="nav-item">
+    <%= render change_state_btn %>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link mx-3 dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" 
+    aria-haspopup="true" aria-expanded="false">
+        <%= current_user.full_name.capitalize %>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   
+                  <%= link_to "My Shops", shops_path, class: "dropdown-item" %>
+                  
+                  <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item"%> 
+                  <div class="dropdown-divider"></div>
+                
+               
+     
+            <%= link_to 'Logout', logout_path, class: 'dropdown-item', method: :delete %>
+        </div>
+</li>

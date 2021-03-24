@@ -1,0 +1,192 @@
+
+
+ <!-- Side navigation -->
+<div class="sidenav">
+
+  <a class="" href="/">
+           <%= image_tag "logo-green.svg" %>
+  </a>
+  
+  <a href="/shops"><i class="nav-icon fas fa-shopping-cart"></i>Buy<span class="badge badge-warning right">1</span></a>
+  <div class="dropdown-divider"></div>
+  <a href="#">Help</a>
+
+</div>
+
+<!-- Page content -->
+<div class="main">
+<%= render 'home/partials/nav'%>
+    <!-- Devise notification styled with bootstrap -->
+<% if notice %>
+<div class="notice alert alert-success alert-dismissible fade show"
+role="alert">
+<%= notice %>
+<button type="button" class="close" data-dismiss="alert" aria-
+label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<% elsif alert %>
+<div class="danger alert alert-danger alert-dismissible fade show"
+role="alert">
+<p><%= alert %></p>
+<button type="button" class="close" data-dismiss="alert" aria-
+label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<% end %>
+
+
+<div class="wrapper1" style="min-height: 600px;">
+
+
+
+<section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h5>Home</h5>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Layouts</a></li>
+              <li class="breadcrumb-item active">Home</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+<section class="content">
+
+      <div class="container-fluid">
+
+       
+      
+
+
+        <div class="row">
+          <div class="col-12">
+            <!-- Default box -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Dashboard</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fas fa-minus"></i></button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                    <i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+               
+              
+
+
+<h5>Edit <%= resource_name.to_s.humanize %></h5>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="form-group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+  </div>
+   <div class="form-group">
+    <%= f.label :full_name %><br />
+    <%= f.text_field :full_name, autocomplete: "fullname", class: "form-control" %>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :subscription_seats %><br />
+    <%= f.text_field :subscription_seats, autocomplete: "subscriptionseats", class: "form-control" %>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1, autocomplete: "address1", class: "form-control" %>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2,  autocomplete: "address2", class: "form-control" %>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :postal_code %><br />
+    <%= f.text_field :postal_code,  autocomplete: "postalcode", class: "form-control" %>
+  </div>
+
+   <div class="form-group">
+    <%= f.label :city %><br />
+    <%= f.text_field :city,  autocomplete: "city", class: "form-control" %>
+  </div>
+
+   <div class="form-group">
+    <%= f.label :country %><br />
+    <%= f.text_field :country,  autocomplete: "country", class: "form-control" %>
+  </div>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" ,class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" ,class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" ,class: "btn btn-primary"%>
+  </div>
+<% end %>
+
+
+
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
+
+<%= link_to "Back", :back %>
+
+
+
+
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <div class="p-2 text-xs">
+                  <div class="pull-right text-muted py-1">
+                    © Copyright <strong>Driversnote</strong> <span class="hidden-xs-down">- Built with care!!</span>
+                    <a ui-scroll-to="content"><i class="fa fa-long-arrow-up p-x-sm"></i></a>
+                  </div>
+          
+                </div>
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </section>
+</div> 
+
+
+
+</div>

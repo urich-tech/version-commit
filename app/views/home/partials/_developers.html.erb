@@ -1,0 +1,142 @@
+
+
+ <!-- Side navigation -->
+<div class="sidenav">
+
+  <a class="" href="/">
+           <%= image_tag "logo-green.svg" %>
+  </a>
+  
+  <a href="/shops"><i class="nav-icon fas fa-shopping-cart"></i>Buy<span class="badge badge-warning right">1</span></a>
+  <div class="dropdown-divider"></div>
+  <a href="#">Help</a>
+
+</div>
+
+<!-- Page content -->
+<div class="main">
+<%= render 'home/partials/nav'%>
+    <!-- Devise notification styled with bootstrap -->
+<% if notice %>
+<div class="notice alert alert-success alert-dismissible fade show"
+role="alert">
+<%= notice %>
+<button type="button" class="close" data-dismiss="alert" aria-
+label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<% elsif alert %>
+<div class="danger alert alert-danger alert-dismissible fade show"
+role="alert">
+<p><%= alert %></p>
+<button type="button" class="close" data-dismiss="alert" aria-
+label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<% end %>
+
+
+<div class="wrapper1" style="min-height: 600px;">
+
+
+
+<section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h5>Home</h5>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Layouts</a></li>
+              <li class="breadcrumb-item active">Home</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+<section class="content">
+
+      <div class="container-fluid">
+
+       
+      
+
+
+        <div class="row">
+          <div class="col-12">
+            <!-- Default box -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Dashboard</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fas fa-minus"></i></button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                    <i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+               
+                 <h5 class="mb-0 _300">Hello there! <%= current_user.full_name.capitalize %></h5>
+    <small class="text-muted">To Driversnote. You can purchase all available subcriptions</small>
+
+     <div class="row">
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <a href="/shops" class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Sales</span>
+                <span class="info-box-number">760</span>
+              </div>
+              <!-- /.info-box-content -->
+            </a>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-car"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Tracking Routes</span>
+                <span class="info-box-number">2,000</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>
+
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <div class="p-2 text-xs">
+                  <div class="pull-right text-muted py-1">
+                    © Copyright <strong>Driversnote</strong> <span class="hidden-xs-down">- Built with care!!</span>
+                    <a ui-scroll-to="content"><i class="fa fa-long-arrow-up p-x-sm"></i></a>
+                  </div>
+          
+                </div>
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </section>
+</div> 
+
+
+
+</div>
